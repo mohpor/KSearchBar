@@ -31,8 +31,21 @@
                     <view key="view" contentMode="scaleToFill" id="kYZ-Dz-AOy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X8v-WX-eOK" customClass="KSwitch" customModule="Kontrols">
+                                <rect key="frame" x="185" y="486" width="46" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="jpM-6Z-fiJ"/>
+                                    <constraint firstAttribute="width" constant="44" id="pHf-QF-be2"/>
+                                </constraints>
+                            </switch>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="p0q-on-gc1"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="X8v-WX-eOK" firstAttribute="centerY" secondItem="kYZ-Dz-AOy" secondAttribute="centerY" constant="50" id="bJe-0r-eHm"/>
+                            <constraint firstItem="X8v-WX-eOK" firstAttribute="centerX" secondItem="kYZ-Dz-AOy" secondAttribute="centerX" id="rcY-WG-ecm"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="YYf-W6-JAP"/>
                 </viewController>

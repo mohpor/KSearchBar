@@ -55,7 +55,12 @@ public class KSwitch: UISwitch {
     }
   }
   
-  public var insets: UIEdgeInsets = .zero
+  public var insets: UIEdgeInsets = .zero {
+    didSet {
+      self.layoutIfNeeded()
+    }
+  }
+  
   public var switchAnimationDuration: TimeInterval = 0.25
   
   // MARK: Private accessor helpers
@@ -85,7 +90,8 @@ public class KSwitch: UISwitch {
   
   @available(*, unavailable)
   required init?(coder: NSCoder) {
-    fatalError("init(coder:) has not been implemented")
+    super.init(coder: coder)
+    prepareLayout()
   }
   
   // MARK: Private stuff
