@@ -31,6 +31,7 @@ class ViewController: UIViewController {
 //    ksw.isOn = true
 //    ksw.setOn(true, animated: true)
 //    ksw.isEnabled = true
+    ksw.addTarget(self, action: #selector(self.switchChanged(_:)), for: .valueChanged)
     return ksw
   }()
   
@@ -71,5 +72,10 @@ class ViewController: UIViewController {
       make.width.equalTo(44)
       make.height.equalTo(24)
     }
+  }
+  
+  @objc
+  func switchChanged(_ sender: KSwitch) {
+    print("Switch is \(sender.isOn ? "on" : "off")")
   }
 }

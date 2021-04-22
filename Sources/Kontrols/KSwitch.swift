@@ -253,6 +253,7 @@ public class KSwitch: UISwitch {
   @objc
   private func touched() {
     setOn(!isOn, animated: true)
+    self.sendActions(for: .valueChanged)
   }
   
   // MARK: UISwitch Overrides
@@ -271,7 +272,7 @@ public class KSwitch: UISwitch {
     guard self.superview != nil else {
       return
     }
-    applyAppearances(animated: animated)
+    self.applyAppearances(animated: animated)
     self.updateThumbPosition(animated: animated)
   }
   
